@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="gamedictionary.css" />
+        <title>Game Dictionary</title>
+    </head>
+    <body>
+        <!--Sidebar-->
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="howtouse.html">How To Use</a>
+            <a href="gamedictionary.html">Game Dictionary</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <!--Sidebar_open_button-->
+        <div id="main">
+            <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>
+        </div>
+        <!--<h1 split-by="letter" letter-animation="breath">Game Dictionary</h1>-->
+        <!--Main_Contents-->
+        <div class="contents">
+            <h1 id = "title"></h1>
+            <h2 id = "line1"></h2>
+            
+            <!--center_searchbar-->
+            <div class="search">
+                <input type="text" placeholder="단어 입력">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+            </div>
+
+                
+            <!-- Game, Language 선택 버튼-->
+            <div class="GLbutton">
+                <button class="Game lol">
+                    <div id="LOL"></div>
+                </button>
+                <button class="Game valorant">
+                    <div id="Valorant"></div>
+                </button>
+                <button class="Game overwatch">
+                    <div id="Overwatch"></div>
+                </button>
+                <button class="Game battlegrounds">
+                    <div id="Battlegrounds"></div>
+                </button>
+                <button class="Language english">
+                    English
+                </button>
+                <button class="Language korean">
+                    한국어
+                </button>
+                <button class="Language Türkçe">
+                    Türkçe
+                </button>
+            </div>
+            <p id = "testblank">testblank</p>
+
+            <div class="page">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+        
+        <!--discordbot_theme-->
+        <div class="discord_bot">
+            <button class="theme-btn light" onclick="setTheme('neongreen')"  title="Light mode">
+                <img src="./images/discord_light2.jpg">
+            </button>
+            <button class="theme-btn neongreen" onclick="setTheme('neonpink')"  title="Neongreen mode">
+                <img src="./images/discord_neongreen2.jpg">
+            </button>
+            <button class="theme-btn neonpink" onclick="setTheme('light')"  title="Neonpink mode">
+                <img src="./images/discord_neonpink.jpg">
+            </button>
+            <p id = "discordbot"></p>
+            <p id = "discordbot2"></p>
+
+        <!--discordbot_language_button-->
+            <label for="langbutton"><strong id = "line3">Language:</strong></label>
+            <select id="langbutton">
+                <option value="en">English</option>
+                <option value="ko" selected>한국어</option>
+            </select>
+        </div>
+        
+        <!--searchmode_text,keyboard,microphone-->
+        <div class="search-mode">
+            <input type="text" >
+    
+            <div class="icon">
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="plus-option">
+                    <i class="fas fa-keyboard"></i>
+                    <i class="fas fa-microphone"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!--Copyright-->
+        <footer role="contentinfo"> <!-- 주의하세요! role="contentinfo 사용 -->
+            <address>© 2024 bluecobaltberry</address>
+        </footer>
+
+        <!--js파일 연결-->
+        <script type="text/javaScript" src="gamedictionary.js"></script>
+    </body>
+</html>

@@ -1,0 +1,238 @@
+/*font url*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Broken+Fax&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chokokutai&family=Gajraj+One&family=Labrada:wght@600&family=Rubik+Scribble&family=Sigmar&display=swap');
+/*
+font-family: 'Chokokutai', system-ui;
+font-family: 'Gajraj One', sans-serif;
+font-family: 'Labrada', serif;
+font-family: 'Rubik Scribble', system-ui;
+font-family: 'Sigmar', sans-serif;
+*/
+/*theme color*/
+:root,
+:root.light {
+  --bg-color: #fff;
+  --text-color: #123;
+}
+:root.neongreen{
+  --bg-color: #121212;
+  --text-color: #16F529;
+}
+:root.neonpink {
+  --bg-color: #121212;
+  --text-color: #F516E2;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/*Side Bar*/
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+/*main title and contents*/
+#title {
+  font-family: 'Rubik Scribble', system-ui;
+  font-size: 4em;
+  margin: 0.2em;
+  display:flex;
+  justify-content: center;
+}
+.contents {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-basis: 100em;
+  flex-direction: column; /*수직 정렬*/
+  align-items: center;
+  justify-content: center;
+}
+/*Game, Language Button*/
+.Game, .Language{
+  margin: 0.3rem;
+  background-color: transparent;
+  color: var(--text-color);
+  border:none;
+  border-radius: 10px;
+  padding:0.5em;
+  min-height:30px; 
+  min-width: 100px;
+}
+.Game:hover {
+  background-color: var(--text-color);
+  color:black;
+  transition: 0.6s;
+  animation: 0.5s;
+}
+.Game:focus {
+  outline-color: transparent;
+  outline-style:solid;
+  box-shadow: 0 0 0 4px var(--text-color);;
+  transition: 0.4s;
+}
+.Game:active {
+  background-color: #ffbf00;
+}
+
+#testblank {
+  display: flex;
+  height: 50em;
+  justify-content: bottom;
+}
+
+/*Page*/
+
+
+
+
+/*discord bot*/
+.discord_bot {
+  font-family: 'Labrada', serif;
+  font-size: 0.8em;
+  position: fixed;
+  left:1em;
+  bottom:1em;
+}
+
+.theme-btn {
+  width: 6em;
+  height: 6em;
+  padding: 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.theme-btn img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+/*discord bot button display*/
+.light .theme-btn.light {
+  display: block;
+}
+.light .theme-btn.neongreen{
+  display: none;
+}
+.light .theme-btn.neonpink{
+  display: none;
+}
+.neongreen .theme-btn.neongreen {
+  display: block;
+}
+.neongreen .theme-btn.light{
+  display: none;
+}
+.neongreen .theme-btn.neonpink{
+  display: none;
+}
+.neonpink .theme-btn.neonpink {
+  display: block;
+}
+.neonpink .theme-btn.light{
+  display: none;
+}
+.neonpink .theme-btn.neongreen{
+  display: none;
+}
+
+#langbutton{
+  position: absolute;
+}
+body {
+    margin:0;
+}
+
+/*Search Bar*/
+.search {
+  position: relative;
+  float:right;
+  width: 300px;
+}
+
+.search input {
+  width: 100%;
+  border: 1px solid #bbb;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.search img {
+  position : absolute;
+  width: 17px;
+  top: 10px;
+  right: 12px;
+  margin: 0;
+}
+
+
+
+/*copyright*/
+footer {
+  font-family: 'arial';
+  font-size: 0.5em;
+  float: right;
+  position: fixed;
+  right: 1em;
+  bottom: 0.5em;
+}
